@@ -1,0 +1,9 @@
+env
+certs
+ormconfig.json
+certs
+.git*
+coverage
+dist
+documentation
+node_modules
