@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 8
+    },
+    "auditLog": "log\\.fc09d933299293dd1c35874808ad558f2de4e57a-audit.json",
+    "files": [
+        {
+            "date": 1652692444711,
+            "name": "log\\2022-05-16.ZOZO.jsonl",
+            "hash": "d6e496c9c15a8001db0a2b92770eabbf"
+        }
+    ],
+    "hashType": "md5"
+}

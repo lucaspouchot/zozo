@@ -1,0 +1,7 @@
+{"timestamp":1652692804782,"level":"info","date":"2022-05-16T09:20:04.782Z","context":"NestApplication","delay":"+3ms","message":"Server is listening on http://127.0.0.1:3000","data":{}}
+{"timestamp":1652692848885,"level":"info","date":"2022-05-16T09:20:48.885Z","context":"NestFactory","delay":"+17ms","message":"Starting Nest application...","data":{}}
+{"timestamp":1652692848897,"level":"info","date":"2022-05-16T09:20:48.897Z","context":"InstanceLoader","delay":"+0ms","message":"AppModule dependencies initialized","data":{}}
+{"timestamp":1652692848898,"level":"info","date":"2022-05-16T09:20:48.898Z","context":"InstanceLoader","delay":"+1ms","message":"ConfigHostModule dependencies initialized","data":{}}
+{"timestamp":1652692848898,"level":"info","date":"2022-05-16T09:20:48.898Z","context":"InstanceLoader","delay":"+0ms","message":"ConfigModule dependencies initialized","data":{}}
+{"timestamp":1652692848908,"level":"info","date":"2022-05-16T09:20:48.908Z","context":"NestApplication","delay":"+0ms","message":"Nest application successfully started","data":{}}
+{"timestamp":1652692848923,"level":"info","date":"2022-05-16T09:20:48.923Z","context":"NestApplication","delay":"+0ms","message":"Server is listening on http://127.0.0.1:3000","data":{}}

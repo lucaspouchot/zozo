@@ -1,13 +1,10 @@
 import { Injectable, Logger, NestMiddleware } from '@nestjs/common';
-import { AuthService } from "../modules/auth/auth.service";
 
 @Injectable()
 export class LoggerMiddleware implements NestMiddleware {
 
     private readonly logger = new Logger(LoggerMiddleware.name);
-    constructor(
-        private authService: AuthService,
-    ) {}
+    constructor() {}
 
     use(req: any, res: any, next: () => void) {
         if (req.method && req.method !== 'OPTIONS') {
@@ -101,11 +98,6 @@ export class LoggerMiddleware implements NestMiddleware {
         if (ip && ip.indexOf('.') !== -1 && ip.toLowerCase().substr(0, 7) === "::ffff:") {
             ip = ip.substr(7);
         }
-        let jwt = headers['authorization'] || null;
-        if (jwt) {
-            jwt = jwt.substring(7);
-            jwt = this.authService.decode(jwt);
-        }
         this.logger.verbose({
             protocol: 'HTTP',
             action: 'receive',
@@ -113,7 +105,6 @@ export class LoggerMiddleware implements NestMiddleware {
             path: path,
             ip: ip,
             apiVersion: apiVersion,
-            user: jwt?.login || undefined,
             message: 'http request',
             body: body,
         }, `${req.id}`);
