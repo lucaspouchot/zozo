@@ -90,7 +90,6 @@ export class LoggerMiddleware implements NestMiddleware {
 
     logHttpReq(req, res, body) {
         const { method, originalUrl:path, headers } = req;
-        const apiVersion = headers['ffkmda-api-version'] || null;
         let ip = req.ip;
         if (headers['x-forwarded-for']) {
             ip = headers['x-forwarded-for'];
@@ -104,7 +103,6 @@ export class LoggerMiddleware implements NestMiddleware {
             method: method,
             path: path,
             ip: ip,
-            apiVersion: apiVersion,
             message: 'http request',
             body: body,
         }, `${req.id}`);
